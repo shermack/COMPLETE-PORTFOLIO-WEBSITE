@@ -1,11 +1,13 @@
-# COMPLETE-PORTFOLIO-WEBSITE
+💻 COMPLETE PORTFOLIO WEBSITE `< HTML > { CSS } ( JavaScript )`  
 
-COMPLETE PORTFOLIO WEBSITE &lt; HTML > { CSS } ( JavaScript )
+✨ *"Patience builds, curiosity drives, creativity shines."*  
+👉 [Explore the live site here.](https://shermack.github.io/COMPLETE-PORTFOLIO-WEBSITE/)  
 
-The fruit of patience is sweet. Let's [check the webpage.](https://shu-vro.github.io/COMPLETE-PORTFOLIO-WEBSITE/)
+---
 
-_DISCLAIMER: YOU SHOULD USE VITE FOR DEVELOPMENT AND PRODUCTION. to deploy using github pages, visit [vite](https://vitejs.dev/guide/static-deploy#github-pages)_
-
-However, if you do not use vite, you cannot access the mapbox from now (not a big deal). Website will still work, but not with the fancy map. A default placeholder image would be shown.
+### Notes  
+- Built with **Vite** for modern development and blazing performance.  
+- To deploy on GitHub Pages, follow the [Vite guide](https://vitejs.dev/guide/static-deploy#github-pages).  
+- Without Vite, some advanced features like **Mapbox integration** won’t load (you’ll see a placeholder instead).  
 
 <!-- NO MORE FREE API KEYS 🍌 -->
