@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="/resources/swiper-js/swiper-bundle.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="stylesheet" href="/resources/css/loader.css" />
+        <link rel="stylesheet" href="/resources/css/hamburger.css" />
+        <link rel="stylesheet" href="/resources/css/home.css" />
+        <link rel="stylesheet" href="/resources/css/about.css" />
+        <link rel="stylesheet" href="/resources/css/services.css" />
+        <link rel="stylesheet" href="/resources/css/portfolio.css" />
+        <link rel="stylesheet" href="/resources/css/comments.css" />
+        <link rel="stylesheet" href="/resources/css/contact.css" />
+        <link href="/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="/resources/img/favicon.ico"
+            type="image/x-icon" />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+            <h1>
+                Shermack
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about</a
+                    >
+                </li>
+                <li>
+                    <a href="#" onclick="services(); animate6.play();"
+                        >services</a
+                    >
+                </li>
+                <li><a href="#" onclick="portfolio()">portfolio</a></li>
+                <li><a href="#" onclick="comments()">comments</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+            <p>
+                &copy; 2024
+                <a
+                    href="https://github.com/shu-vro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Shermack</a
+                >.
+            </p>
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <h1 align="center">Sharmake Ismael Salat</h1>
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <div class="s-name">Facebook</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <div class="s-name"></div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-codepen"></i>
+                                </a>
+                                <div class="s-name">CodePen</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div class="s-name">Instagram</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> why you? </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what do you do? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what have you done?
+                                </span>
+                            </button>
+                            <button onclick="comments()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what others say? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where are you? </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320">
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+                    </div>
+
+                    <!-- REAL CONTENT -->
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Hello,</p>
+                                <h1>I'm Shermack</h1>
+                                <p class="text">
+                                    AI, Machine Learning & Computer Vision Developer | Web Developer
+                                    Passionate and dedicated to building innovative solutions,
+                                    I turn ideas into high-quality, functional projects with precision and creativity.
+                                    I am deeply committed to my work and enjoy every step of the development process,
+                                    from collaborative discussions to designing and delivering high-quality solutions.
+                                    
+                                </p>
+                                <a
+                                    class="button download"
+                                    href="/resources/img/bg1.png"
+                                    download="shermack_cv"
+                                    >Download CV</a
+                                >
+                                <a
+                                    class="button hire"
+                                    href="#"
+                                    class="hire"
+                                    onclick="contact(); animate5.play()"
+                                    >Hire Me.</a
+                                >
+                            </div>
+                        </div>
+                        <div class="face face2"></div>
+                    </div>
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#" data-text="three">Education</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">PYTHON</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">CSS3</div>
+                                <div class="value" style="left: 75%">75%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">JavaScript</div>
+                                <div class="value" style="left: 65%">65%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">PHP</div>
+                                <div class="value" style="left: 50%">50%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">Jquery</div>
+                                <div class="value" style="left: 45%">45%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 45%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">C++</div>
+                                <div class="value" style="left: 55%">55%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 55%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE -->
+                        <div class="experience">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Sep 2024 - Present</i>
+                                <h2>Independent AI Researcher (Private Projects)</h2>
+                                <i class="name_company">Shermack Ai Lab</i>
+                                <article class="text_hidden">
+                                    Currently developing private AI models and experimenting with custom machines.
+                                    Exploring innovative applications in automation and deep learning.
+                                    Actively open to collaborations on projects with meaningful outcomes.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Jan 2023 - May 2024</i>
+                                <h2>Ai Engineer</h2>
+                                <i class="name_company">Google DeepMind</i>
+                                <article class="text_hidden">
+                                    Focused on reinforcement learning and applied AI projects.
+                                    Designed experiments that improved efficiency and decision-making models.
+                                    Collaborated with a diverse team to scale AI solutions.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Feb 2022 - Dec 2022</i>
+                                <h2>AI Research Intern</h2>
+                                <i class="name_company">OpenAI</i>
+                                <article class="text_hidden">
+                                    Joined the NLP research team, contributing to model training and evaluation.
+                                    Worked on fine-tuning prototypes for better language understanding.
+                                    Gained hands-on experience in large-scale AI systems and collaboration.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">May 2021 - Jan 2022</i>
+                                <h2>IBM Research (AI Intern)</h2>
+                                <i class="name_company">IBM</i>
+                                <article class="text_hidden">
+                                    Assisted in developing machine learning models for data analysis.
+                                    Worked on small automation tasks that improved project workflows.
+                                    Learned practical AI deployment and teamwork in a research setting.
+                                </article>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2023 - 2024</i>
+                                <h2>Google Vision AI</h2>
+                                <i class="name_company">Google Cloud Training</i>
+                                <article class="text_hidden">
+                                    Explored Google’s Vision AI tools for image recognition and computer vision.
+                                    Worked with APIs to classify, detect, and extract insights from images.
+                                    Learned how to integrate AI into real-world applications with cloud platforms.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2020-2021</i>
+                                <h2>Completed Machine Learning</h2>
+                                <i class="name_company">Coursera – Stanford Online</i>
+                                <article class="text_hidden">
+                                    Studied supervised and unsupervised learning, neural networks, and model evaluation.
+                                    Applied concepts through hands-on coding assignments and real-world datasets.
+                                    Built a solid foundation for understanding how AI systems learn and improve.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2021 - 2022</i>
+                                <h2>Deep Learning Specialization</h2>
+                                <i class="name_company">DeepLearning.AI – Andrew Ng</i>
+                                <article class="text_hidden">
+                                    Focused on neural networks, CNNs, and sequence models.
+                                    Gained practical experience in training and optimizing deep learning architectures.
+                                    Enhanced my skills in designing models for vision and language tasks.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2020 - 2021</i>
+                                <h2>AI & Machine Learning</h2>
+                                <i class="name_company">YouTube University – Self-Learning</i>
+                                <article class="text_hidden">
+                                    My biggest classroom has been YouTube, where I followed top AI educators.
+                                    Learned advanced topics from model optimization to emerging AI research.
+                                    Gained practical knowledge by replicating tutorials and applying them in projects.
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                    <div class="hero">
+                        <span class="typography">
+                            <span class="t_dummy">I know how to</span> <br />
+                            <span class="t-box">
+                                <span class="box-side box-front"
+                                    >take risk</span
+                                >
+                                <span class="box-side box-top"
+                                    >take a side</span
+                                >
+                                <span class="box-side box-back"
+                                    >be different</span
+                                >
+                                <span class="box-side box-bottom"
+                                    >be innovative</span
+                                >
+                            </span>
+                        </span>
+                        <p class="hero-text">
+                            Shermack is an excellent AI and machine learning developer. 
+                            He’s innovative, highly reliable, and a pleasure to work with. 
+                            Always delivers great value and consistently goes the extra mile to achieve results.
+                        </p>
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img src="/resources/img/elements/web_bg.png" alt="" />
+                        <p class="c_content">
+                            <span class="c_title">Web</span>
+                            His creative journey started with backend development and databases.  
+                            To expand his skills, he explored AI and machine learning, blending logic with innovation.  
+                            Since then, he has worked hard to stay relevant in both fields, building smarter systems.  
+                            For smooth collaboration with clients, he now uses modern tools for prototyping and problem-solving.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">Graphics</span>
+                            With a developer’s eye for patterns, Shermack is passionate about turning complex data into intelligent solutions by combining precision, logic, and creativity.  
+                            He pays close attention to details, performance, and seamless user interaction when building smart systems.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="/resources/img/elements/graphics_bg.png"
+                            alt="" />
+                    </div>
+                    <div class="capabilities left">
+                        <img
+                            src="/resources/img/elements/seo_bg.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            " />
+                        <p class="c_content">
+                            <span class="c_title">SEO</span>
+                            With 3+ years of experience in AI and backend development, Shermack shows that blending strategy with technical expertise creates powerful and innovative digital solutions.  
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="foot">
+                        <h2>Works:</h2>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Shermack Ai Lab</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="/resources/img/portfolios/app/2.jpg"
+                                alt="portfolio" />
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Art Database Director</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="/resources/img/portfolios/card/2.jpg"
+                                alt="portfolio" />
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Lora Website Database</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="/resources/img/portfolios/web/1.jpg"
+                                alt="portfolio" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1>Wedding Couple</h1>
+                                        <span
+                                            >Category:
+                                            <span style="color: #999"
+                                                >Web Design</span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2>Project Brief:</h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            ">
+                                            I developed a reliable backend system for a LoRa-based website, focusing on real-time data handling and secure API integration.  
+                                            He optimized database performance to ensure smooth communication between devices and the web application.  
+                                            The project highlighted his ability to merge IoT solutions with strong backend development practices.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2>Project Info</h2>
+                                    <p class="Date">
+                                        <b>Date: </b>
+                                        <span style="color: #999">2020</span>
+                                    </p>
+                                    <p class="client">
+                                        <b>Client: </b>
+                                        <span style="color: #999">xyz</span>
+                                    </p>
+                                    <p>
+                                        <b>Tools: </b>
+                                        <span style="color: #999"
+                                            >HTML, CSS, JavaScript</span
+                                        >
+                                    </p>
+                                    <p class="link">
+                                        <b>Web: </b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                >www.domain.com</a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >Web Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    >Logo</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    >Cards</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    >Apps</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    >Icons</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        <div class="mix web">
+                            <img
+                                src="/resources/img/portfolios/web/1.jpg"
+                                alt="" />
+                            <span class="title">Lora Website Database</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                       
+                        <div class="mix card">
+                            <img
+                                src="/resources/img/portfolios/card/1.jpg"
+                                alt="" />
+                            <span class="title">Silent-Voice Ai</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src="/resources/img/portfolios/web/2.jpg"
+                                alt="" />
+                            <span class="title">Student Guide Backend</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+ 
+                         <div class="mix app">
+                            <img
+                                src="/resources/img/portfolios/app/3.jpg"
+                                alt="" />
+                            <span class="title">Weather app Backend</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span>See What My Clients Say about Me.</span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Feizel Mohamed</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                 Shermack is an outstanding backend developer with strong problem-solving skills.
+                                 He’s dependable, easy to collaborate with, 
+                                 and consistently delivers high-quality results on time.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Anfac Ismail</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    I was impressed by Shermack’s eye for design and attention to detail. 
+                                    He combines creativity with technical precision, 
+                                    making every project both visually appealing and functional.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Mustafa Duba</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Shermack is a versatile developer who can handle both frontend and backend seamlessly. 
+                                    He communicates well, adapts quickly, 
+                                    and is always focused on delivering value.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Halkano Somo</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    I admire Shermack’s dedication and innovative mindset. 
+                                    Whether it’s graphics, web design, or system optimization, 
+                                    he brings creativity and technical skill together effortlessly.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Shukri Dida</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Working with Shermack on a LoRa backend project was a great experience. 
+                                    He built a reliable system, explained complex ideas clearly, 
+                                    and ensured smooth performance throughout.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/resources/img/favicon.ico" alt="" />
+                                <h4>Bismark</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Shermack is highly skilled in SEO and digital strategy. 
+                                    His work improved our site’s visibility and engagement, 
+                                    and he approaches every challenge with professionalism.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="tel:+8800000000000">+254 798 244 407</a>
+                            <a href="tel:+8811111111111">+254 798 244 407</a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://www.google.com/maps/place/Sherpur+Town+Hall/@25.0136644,90.0140045,355m/data=!3m1!1e3!4m5!3m4!1s0x3757d6136d793499:0x8c22620664dc6a37!8m2!3d25.0156371!4d90.0168872">
+                                <h3>Kenya, East Africa</h3>
+                                <span>Nairobi, Garissa</span><br />
+                                <span>Town</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:email1.gmail.com"
+                                >shermacksalat@mail.com</a
+                            >
+                            <a href="mailto:email2.gmail.com"
+                                >shermacksalat@gmail.com</a
+                            >
+                        </div>
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required></textarea>
+                        <button class="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+        <script src="/resources/js/jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="/resources/js/mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
+        <script src="/resources/swiper-js/swiper-bundle.min.js"></script>
+        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+        <script src="/resources/mapbox-gl/mapbox-gl.js"></script>
+        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+        <script src="/resources/js/email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="/resources/js/vanilla-tilt.min.js"></script>
+        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+        <script src="/resources/js/anime.min.js"></script>
+        <!-----------------LOCAL (HOME)----------------->
+        <script src="/resources/js/home.js"></script>
+        <!-----------------LOCAL (ABOUT)----------------->
+        <script src="/resources/js/about.js"></script>
+        <!-----------------LOCAL (SERVICES)----------------->
+        <script src="/resources/js/services.js"></script>
+        <!-----------------LOCAL (PORTFOLIO)----------------->
+        <script src="/resources/js/portfolio.js"></script>
+        <!-----------------LOCAL (COMMENTS)----------------->
+        <script src="/resources/js/comments.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="/resources/js/main.js"></script>
+
+        <!-----------------CONTACT LOGIC-------------------------->
+        <script type="module">
+            // The 'building' layer in the mapbox-streets vector source contains building-height
+            // data from OpenStreetMap.
+            // For more, goto:
+            // https://www.mapbox.com/install/
+
+            mapboxgl.accessToken =
+                import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+            var map = new mapboxgl.Map({
+                style: "mapbox://styles/mapbox/light-v10",
+                center: [90.3911645, 23.7494284], // Longitude, latitude
+                zoom: 18.5, // Zoom level
+                pitch: 45,
+                bearing: -17.6,
+                container: "map", // Our #map target.
+                antialias: true,
+            });
+
+            map.on("load", function () {
+                // Insert the layer beneath any symbol layer.
+                var layers = map.getStyle().layers;
+
+                var labelLayerId;
+                for (var i = 0; i < layers.length; i++) {
+                    if (
+                        layers[i].type === "symbol" &&
+                        layers[i].layout["text-field"]
+                    ) {
+                        labelLayerId = layers[i].id;
+                        break;
+                    }
+                }
+
+                map.addLayer(
+                    {
+                        id: "3d-buildings",
+                        source: "composite",
+                        "source-layer": "building",
+                        filter: ["==", "extrude", "true"],
+                        type: "fill-extrusion",
+                        minzoom: 15,
+                        paint: {
+                            "fill-extrusion-color": "#aaa",
+
+                            // use an 'interpolate' expression to add a smooth transition effect to the
+                            // buildings as the user zooms in
+                            "fill-extrusion-height": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "height"],
+                            ],
+                            "fill-extrusion-base": [
+                                "interpolate",
+                                ["linear"],
+                                ["zoom"],
+                                15,
+                                0,
+                                15.05,
+                                ["get", "min_height"],
+                            ],
+                            "fill-extrusion-opacity": 0.6,
+                        },
+                    },
+                    labelLayerId
+                );
+            });
+            function vanillaTilt(element) {
+                VanillaTilt.init(document.querySelector(element), {
+                    max: 10,
+                    speed: 200,
+                    glare: true,
+                    "max-glare": 0.5,
+                });
+            }
+
+            vanillaTilt(".info1");
+            vanillaTilt(".info2");
+            vanillaTilt(".info3");
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+            let form_name = document.getElementById("fname");
+            let email = document.getElementById("email");
+            let subject = document.getElementById("subject");
+            let message = document.getElementById("message");
+            let submit = document.getElementById("submit");
+
+            submit.addEventListener("click", () => {
+                if (
+                    form_name.value == "" &&
+                    email.value == "" &&
+                    subject.value == "" &&
+                    message.value == ""
+                ) {
+                    alert("All fields are required");
+                    return;
+                } else {
+                    submitEmail();
+                }
+            });
+
+            emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+
+            function submitEmail() {
+                let param = {
+                    method: "POST",
+                    from_name: form_name.value,
+                    from_email: email.value,
+                    to_name: "Shuvro!",
+                    subject: subject.value,
+                    message: message.value,
+                };
+
+                emailjs.send("service_name", "template_name", param).then(
+                    function (response) {
+                        alert(
+                            "SUCCESS! " + response.status + " " + response.text
+                        );
+                    },
+                    function (error) {
+                        alert("FAILED... " + error);
+                    }
+                );
+            }
+
+            document.querySelector("form").addEventListener("submit", (e) => {
+                e.preventDefault();
+            });
+        </script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script defer>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+
+            const animate6 = anime({
+                targets: [".services .t_dummy", ".services .hero-text"],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>
